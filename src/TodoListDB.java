@@ -43,4 +43,9 @@ public class TodoListDB {
 		Date tmpDate = new Date();
 		System.out.println(sdf.format( tmpDate));
 	}
+	
+	public void printList()  
+	{
+		   mDB.forEach((k, v) -> System.out.println(k + " : ")); 	       
+	}
 }
