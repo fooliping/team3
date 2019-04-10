@@ -51,9 +51,11 @@ public class TodoListDB {
 	
 	public void printList()
 	{
+	
 		for(Integer key: mDB.keySet())
 		{
-			System.out.println("Task: " + mDB.get(key));
+			System.out.println("Task id: " + mDB.get(key).getID());
+			System.out.println("Task Msg: " + mDB.get(key).getMsg());
 		}
 	}
 }
