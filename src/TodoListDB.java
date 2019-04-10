@@ -36,6 +36,11 @@ public class TodoListDB {
 		return (TodoList)mDB.get(id);
 	}
 	
+	//public void printAll(Integer id)
+	//{
+		//return (TodoList)mDB.get(id);
+	//}
+	
 	public void testDate()
 	{
 		DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
@@ -44,8 +49,15 @@ public class TodoListDB {
 		System.out.println(sdf.format( tmpDate));
 	}
 	
-	public void printList()  
+
+	public void printList()
 	{
-		   mDB.forEach((k, v) -> System.out.println(k + " : ")); 	       
+	
+		for(Integer key: mDB.keySet())
+		{
+			System.out.println("Task id: " + mDB.get(key).getID());
+			System.out.println("Task Msg: " + mDB.get(key).getMsg());
+		}
+
 	}
 }
