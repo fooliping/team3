@@ -2,12 +2,11 @@ import java.util.Date;
 
 public class TodoList {
 
-	private int mID;
-	
-	private Date mDueDate;
-	private boolean mCrossed;
-	private String mMsg;
-	private Integer mPriority;
+	private int mID=-1;
+	private Date mDueDate=new Date();
+	private boolean mCrossed=false;
+	private String mMsg="";
+	private Integer mPriority=0;
 	
 	public int getID() {
 		return mID;
@@ -53,7 +52,7 @@ public class TodoList {
 		if (obj instanceof TodoList)
 		{
 			TodoList tmp = (TodoList)obj;
-			if ((tmp.getID()== mID))
+			if ((tmp.getID()== mID) && (tmp.getCrossed()==mCrossed) &  tmp.getMsg().equals(mMsg) && (tmp.getDueDate().getTime()==mDueDate.getTime()))
 				return true;
 		}
 		return false;

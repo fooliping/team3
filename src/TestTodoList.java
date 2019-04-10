@@ -13,8 +13,8 @@ public class TestTodoList {
 		TodoList ls2 = new TodoList();
 		ls1.setID(1);
 		ls2.setID(1);
-		//ls1.setDueDate(new Date());
-		//ls2.setDueDate(new Date());
+		ls1.setDueDate(new Date());
+		ls2.setDueDate(new Date());
 		
 		assertTrue(ls1.equals(ls2));
 	}
