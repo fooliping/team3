@@ -15,7 +15,7 @@ public class Team3ToDoList {
 	
 	public static void showMenu(){
 		System.out.println("Welcome to To Do List Application");
-		showCurrentList();
+		//showCurrentList();
 		System.out.println("Menu: ");
 		System.out.println("1. List all to do list");
 		System.out.println("2. Add new item");
@@ -37,7 +37,7 @@ public class Team3ToDoList {
 		switch(input){
 		case 1:
 			System.out.println("1");
-			
+			db.printList();
 			break;
 			
 		case 2:
@@ -68,6 +68,7 @@ public class Team3ToDoList {
 		return input;
 	}
 	
+	/*
 	public static void showCurrentList(){
 		ArrayList<String> list = new ArrayList<String>();
 		list.add("Fix bug no 1");
@@ -78,5 +79,5 @@ public class Team3ToDoList {
 			System.out.println(s);
 		}
 		
-	}
+	}*/
 }
