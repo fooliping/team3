@@ -36,7 +36,7 @@ public class TodoList {
 	public void setMsg(String mMsg) {
 		this.mMsg = mMsg;
 	}
-	
+	/*
 	public boolean equals(Object obj)
 	{
 		if (obj instanceof TodoList)
@@ -46,7 +46,19 @@ public class TodoList {
 				return true;
 		}
 		return false;
+	}*/
+	
+	public boolean equals(Object obj)
+	{
+		if (obj instanceof TodoList)
+		{
+			TodoList tmp = (TodoList)obj;
+			if ((tmp.getID()== mID))
+				return true;
+		}
+		return false;
 	}
+	
 	public Integer getPriority() {
 		return mPriority;
 	}
