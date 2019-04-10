@@ -36,6 +36,11 @@ public class TodoListDB {
 		return (TodoList)mDB.get(id);
 	}
 	
+	//public void printAll(Integer id)
+	//{
+		//return (TodoList)mDB.get(id);
+	//}
+	
 	public void testDate()
 	{
 		DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
