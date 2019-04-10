@@ -3,7 +3,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
+
 public class Team3ToDoList {
+	static TodoListDB db = new TodoListDB();
+	static int taskCnt = 0;
+	
+	 
 	public static void main(String[] args){
 		boolean exit = false;
 		do {
@@ -27,10 +32,8 @@ public class Team3ToDoList {
 	
 	public static int readInput(){
 		
-		TodoList task = new TodoList();
-		TodoListDB db = new TodoListDB();
-		int taskCnt = 0;
-		
+
+
 		Scanner scanner = new Scanner(System.in);
 		int input = scanner.nextInt();	
 		
@@ -44,6 +47,8 @@ public class Team3ToDoList {
 			System.out.println("2");
 			
 			System.out.println("Enter task Description");
+			
+			TodoList task = new TodoList();
 			String desc = scanner.next();
 			taskCnt++;
 			task.setID(taskCnt);
