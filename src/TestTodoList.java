@@ -16,7 +16,8 @@ public class TestTodoList {
 		ls1.setDueDate(new Date());
 		ls2.setDueDate(new Date());
 		
-		assertTrue(ls1.equals(ls2));
+		assertEquals(ls1,ls2);
+		//assertTrue(ls1.equals(ls2));
 	}
 
 	@Test
