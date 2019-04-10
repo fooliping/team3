@@ -48,4 +48,12 @@ public class TodoListDB {
 		Date tmpDate = new Date();
 		System.out.println(sdf.format( tmpDate));
 	}
+	
+	public void printList()
+	{
+		for(Integer key: mDB.keySet())
+		{
+			System.out.println("Task: " + mDB.get(key));
+		}
+	}
 }
